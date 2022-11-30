@@ -3,13 +3,13 @@ const cors = require("cors");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const { getTimeStamp } = require("./helpers/charginSession.helpers");
+const User = require("./models/user");
 require("dotenv").config();
 
 const app = express();
 
 const port = process.env.PORT || 8000;
-const dbUrl =
-  "mongodb+srv://admin:admin1010@cluster0.elgplxy.mongodb.net/greems?retryWrites=true&w=majority";
+const dbUrl = "mongodb://greemsev:greemsev1234@localhost:27017/greems";
 
 mongoose
   .connect(dbUrl)
@@ -24,6 +24,15 @@ app.use("/user", require("./routes/user"));
 app.use("/vehicle", require("./routes/vehicle"));
 app.use("/charginSession", require("./routes/charginSession"));
 app.get("/", (req, res) => res.json({ message: "Hello!!, welcome to Greems" }));
+
+// app.get("/test", async (req, res) => {
+//   try {
+//     const users = await User.find();
+//     return res.json({ users });
+//   } catch (error) {
+//     return res.json({ error });
+//   }
+// });
 
 app.listen(port, () => {
   console.log(`Server is up and running on ${port}...`);

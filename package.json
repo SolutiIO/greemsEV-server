@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/purohitdhairy67/GreemsServer.git"
+    "url": "git+https://github.com/SolutiIO/greemsEV-server.git"
   },
   "author": "dizayn.io",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/purohitdhairy67/GreemsServer/issues"
+    "url": "https://github.com/SolutiIO/greemsEV-server/issues"
   },
-  "homepage": "https://github.com/purohitdhairy67/GreemsServer#readme",
+  "homepage": "https://github.com/SolutiIO/greemsEV-server#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",
